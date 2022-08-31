@@ -1,0 +1,45 @@
+    Name - KAMAL KANT    
+    Class - MCA - II
+    Roll    - 13                    
+    Subject - Data Analysis
+    
+  *----------------------------------------------------*
+  *      Data Analysis Pratical Assignment             *
+  *----------------------------------------------------*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Rename column with valid Name.
+
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("train.csv")
+
+#Rename Column to valied Name:
+renameDf = df.rename(columns={'Sex': 'Gender'}) 
+#Renames Sex column to Gender
+
+print(renameDf.isnull().sum())
+
+
+
+*********** OUTPUT ***************
+
+runfile('D:/Data Analysis/untitled2.py', wdir='D:/Data Analysis')
+PassengerId      0
+Survived         0
+Pclass           0
+Name             0
+Gender           0
+Age            177
+SibSp            0
+Parch            0
+Ticket           0
+Fare             0
+Cabin          687
+Embarked         2
+dtype: int64
+

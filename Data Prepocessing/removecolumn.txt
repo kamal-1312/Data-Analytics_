@@ -1,0 +1,47 @@
+
+    Name - KAMAL KANT    
+    Class - MCA - II
+    Roll    - 13                    
+    Subject - Data Analysis
+    
+  *----------------------------------------------------*
+  *      Data Analysis Pratical Assignment             *
+  *----------------------------------------------------*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Removing Uneccessory Columns
+
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("train.csv")
+
+# removing all nullvalues rows:
+f1 = df.dropna() # drops rows with 1 or more Null value
+print(f1.isnull().sum())
+
+#removing all Duplicates value:
+f2=df.drop_duplicates(subset="Name",keep= False,inplace=True)
+print("duplicate Data:",f2)
+
+
+
+
+*********** OUTPUT ***************
+
+runfile('D:/Data Analysis/untitled2.py', wdir='D:/Data Analysis')
+PassengerId    0
+Survived       0
+Pclass         0
+Name           0
+Sex            0
+SibSp          0
+Parch          0
+Ticket         0
+Fare           0
+Embarked       2
+dtype: int64
+

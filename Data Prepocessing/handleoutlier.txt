@@ -1,0 +1,44 @@
+
+    Name - KAMAL KANT    
+    Class - MCA - II
+    Roll    - 13                    
+    Subject - Data Analysis
+    
+  *----------------------------------------------------*
+  *      Data Analysis Pratical Assignment             *
+  *----------------------------------------------------*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#Handling Outlier.              
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+sample= [25, 401, 8, 27, 13, 16, 15, 21, 15, 75, 1, 19]
+
+# Finding Outliers:
+
+# Computing 10th, 90th percentiles and replacing the outliers
+tenth_percentile = np.percentile(sample, 10)
+ninetieth_percentile = np.percentile(sample, 90)
+
+# print(tenth_percentile, ninetieth_percentile)
+b = np.where(sample<tenth_percentile, tenth_percentile, sample)
+b = np.where(b>ninetieth_percentile, ninetieth_percentile, b)
+
+print("Sample:", sample)
+print("Data after Removing Outlier:\n",b)
+
+
+
+
+*********** OUTPUT **************
+
+
+runcell(0, 'D:/Data Analysis/untitled7.py')
+Sample: [25, 401, 8, 27, 13, 16, 15, 21, 15, 75, 1, 19]
+Data after Removing Outlier:
+ [25.  70.2  8.5 27.  13.  16.  15.  21.  15.  70.2  8.5 19. ]

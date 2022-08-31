@@ -1,0 +1,41 @@
+
+    Name - KAMAL KANT    
+    Class - MCA - II
+    Roll    - 13                    
+    Subject - Data Analysis
+    
+  *----------------------------------------------------*
+  *      Data Analysis Pratical Assignment             *
+  *----------------------------------------------------*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Computation of Range
+
+
+import math
+import pandas as pd
+
+data = [12,11,4,2,32,12,45,32,-101,150]
+r= max(data)- min(data)
+
+df = pd.DataFrame(data,columns=['x'])
+print(df)
+print("Range =", r)
+
+
+
+*********** OUTPUT ***************
+
+runfile('D:/Data Analysis/untitled2.py', wdir='D:/Data Analysis')
+     x
+0   12
+1   11
+2    4
+3    2
+4   32
+5   12
+6   45
+7   32
+8 -101
+9  150
+Range = 251

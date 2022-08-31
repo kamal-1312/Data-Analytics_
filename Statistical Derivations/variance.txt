@@ -1,0 +1,56 @@
+    Name - KAMAL KANT    
+    Class - MCA - II
+    Roll    -                     
+    Subject - Data Analysis
+    
+  *----------------------------------------------------*
+  *      Data Analysis Pratical Assignment             *
+  *----------------------------------------------------*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#implementation of Variance,standard deviation.
+
+
+
+import math
+import pandas as pd
+
+data = [13,22,45,48,45,5,50]
+
+df = pd.DataFrame(data,columns=['x'])
+M = sum(data)/len(data)
+xi_x = []
+
+for i in range(df.shape[0]):
+    xi_x.append(df.iat[i,0]-M)
+    
+df['xi-x'] = xi_x
+sq_xi_x = []    
+
+for i in range(df.shape[0]):
+    sq_xi_x.append(round(pow(df.iat[i,1],2), 2))
+    
+    
+df['(xi-x)2']=sq_xi_x
+variance=sum(sq_xi_x)/len(sq_xi_x)
+std_dev=math.sqrt(variance)
+
+print(df)
+
+print("variance =",variance)
+print("standard deviation =",std_dev)
+
+
+************ OUTPUT ************
+
+runfile('D:/Data Analysis/untitled2.py', wdir='D:/Data Analysis')
+    x       xi-x  (xi-x)2
+0  13 -19.571429   383.04
+1  22 -10.571429   111.76
+2  45  12.428571   154.47
+3  48  15.428571   238.04
+4  45  12.428571   154.47
+5   5 -27.571429   760.18
+6  50  17.428571   303.76
+variance = 300.81714285714287
+standard deviation = 17.344080917048988

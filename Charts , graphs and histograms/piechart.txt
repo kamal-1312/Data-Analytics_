@@ -1,0 +1,33 @@
+
+    Name - KAMAL KANT    
+    Class - MCA - II
+    Roll    - 13                    
+    Subject - Data Analysis
+    
+  *----------------------------------------------------*
+  *      Data Analysis Pratical Assignment             *
+  *----------------------------------------------------*
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Implementation of pie chart.
+
+
+
+# Import libraries
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+# Creating dataset
+Lastnames = ['apple', 'oneplus', 'mi', 
+	     'Samsung', 'Realme', 'vivo']
+
+data = [17,6,10,14,6,8]
+
+# Creating plot
+
+plt.pie(data, labels = Lastnames)
+plt.title("Most common Brands in India")
+
+# show plot
+plt.show()
